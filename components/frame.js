@@ -30,13 +30,6 @@ export default ({ children }) => (
         .description {
             text-align: center;
         }
-        .row {
-            max-width: 880px;
-            margin: 80px auto 40px;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-        }
         @keyframes Loading {
             0%{background-position:0% 50%}
             50%{background-position:100% 50%}

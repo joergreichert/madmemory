@@ -1,19 +1,18 @@
+import MenuButton from '../button'
 import MenuEntry from '../entry'
+import MenuHeading from '../heading'
 import Level from './levelselect'
 
 export default () => (
     <div>
-        <form>
-            <Level value='easy' label='Einfach' />
-            <Level value='medium' label='Mittel' />
-            <Level value='hard' label='Schwer' />
-
-            <div className="form-group">
-                <button className="btn btn-primary mt-2" type="submit">
-                    Save
-                </button>
-            </div>
-        </form>
-        <MenuEntry link='./' label='Zurück' />
+        <MenuHeading header="Level-Einstellungen" />
+        <MenuEntry>
+            <form>
+                <Level value='easy' label='Einfach' />
+                <Level value='medium' label='Mittel' />
+                <Level value='hard' label='Schwer' />
+            </form>
+        </MenuEntry>
+        <MenuButton link='./' label='Zurück' />
     </div>
 )

@@ -1,4 +1,4 @@
-import MenuEntry from './entry'
+import MenuEntry from './button'
 
 export default () => (
     <div>

@@ -9,6 +9,12 @@
     "eslint": "^6.6.0",
     "next": "^9.1.2",
     "react": "^16.11.0",
-    "react-dom": "^16.11.0"
+    "react-dom": "^16.11.0",
+    "react-redux": "^7.1.1",
+    "redux": "^4.0.4"
+  },
+  "devDependencies": {
+    "redux-devtools": "^3.5.0",
+    "redux-devtools-extension": "^2.13.8"
   }
 }
