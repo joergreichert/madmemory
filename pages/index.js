@@ -1,5 +1,5 @@
 import Frame from '../components/frame';
-import StartMenu from '../components/menu_start';
+import StartMenu from '../components/menu/start';
 
 export default () => {
   return (
