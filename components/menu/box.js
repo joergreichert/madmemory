@@ -1,17 +1,8 @@
-import Link from 'next/link'
-import Entry from './entry'
-import Box from './box'
-import {forwardRef} from 'react';
-
-export default ({label, link}) => (
+export default ({label}) => (
     <div>
-        <Entry>
-            <Link href={link}>
-                <a className="card">
-                    <h3>{label}</h3>
-                </a>
-            </Link>
-        </Entry>
+        <a className="card">
+            <h3>{label}</h3>
+        </a>
         <style jsx>{`
             .card {
                 padding: 18px 18px 24px;
@@ -36,6 +27,6 @@ export default ({label, link}) => (
                 font-size: 13px;
                 color: #333;
             }
-        `}</style>        
+        `}</style>
     </div>
 )
