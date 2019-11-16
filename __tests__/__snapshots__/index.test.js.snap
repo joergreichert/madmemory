@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`With Snapshot Testing App shows "Menu" 1`] = `
+<div>
+  <div
+    className="jsx-3435870881"
+  >
+    <div
+      className="jsx-3435870881 hero"
+    >
+      <h1
+        className="jsx-3435870881 title"
+      >
+        MadMemory
+      </h1>
+      <p
+        className="jsx-3435870881 description"
+      >
+        Can you remember it?
+      </p>
+      <div>
+        <div
+          className="jsx-307703491"
+        >
+          <div
+            className="jsx-1888330655"
+          >
+            <div
+              className="jsx-1888330655 entryRow"
+            >
+              <a
+                className="jsx-307703491 card"
+                href="./game/words"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
+              >
+                <h3
+                  className="jsx-307703491"
+                >
+                  Spielen
+                </h3>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          className="jsx-307703491"
+        >
+          <div
+            className="jsx-1888330655"
+          >
+            <div
+              className="jsx-1888330655 entryRow"
+            >
+              <a
+                className="jsx-307703491 card"
+                href="./settings"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
+              >
+                <h3
+                  className="jsx-307703491"
+                >
+                  Einstellungen
+                </h3>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
