@@ -4,11 +4,11 @@ import RoundOne from '../../components/game/round_one'
 import { connect, useSelector } from 'react-redux'
 
 const WordsGame = () => {
-    const level = useSelector(state => state.settings ? state.settings.level : 'easy') 
+    const level = useSelector(state => state.settings ? state.settings.level : 'easy')
     return (
         <Frame>
             <RoundOne level={level} data={data} />
         </Frame>
-    );    
+    );
 }
 export default connect()(WordsGame)

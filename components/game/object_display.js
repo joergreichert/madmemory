@@ -26,7 +26,7 @@ export default ({roundNumber, word}) => {
                 color: #067df7;
                 font-size: 72px;
             }
-        `}</style>            
+        `}</style>
         </div>
-    );    
+    );
 }

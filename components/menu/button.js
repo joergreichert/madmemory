@@ -1,7 +1,5 @@
 import Link from 'next/link'
 import Entry from './entry'
-import Box from './box'
-import {forwardRef} from 'react';
 
 export default ({label, link}) => (
     <div>
@@ -36,6 +34,6 @@ export default ({label, link}) => (
                 font-size: 13px;
                 color: #333;
             }
-        `}</style>        
+        `}</style>
     </div>
 )

@@ -3,7 +3,7 @@ import { connect, useSelector, useDispatch } from 'react-redux'
 import { setLevel } from '../../../lib/actions'
 
 const LevelSelect = ({value, label}) => {
-    const level = useSelector(state => state.settings ? state.settings.level : 'easy') 
+    const level = useSelector(state => state.settings ? state.settings.level : 'easy')
     const dispatch = useDispatch();
     return (
         <div className="form-check">

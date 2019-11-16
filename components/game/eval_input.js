@@ -9,7 +9,7 @@ import Col from 'react-bootstrap/Col'
 export default ({expected, roundOne, roundTwo}) => {
     const set = new Set(roundOne);
     roundTwo.forEach(elem => set.add(elem));
-    const shuffled = moveRandomSelectionToTarget([...set], set.size)
+    const shuffled = moveRandomSelectionToTarget([...set], set.size).selected
     let hasSelected = false
 
     const selectWord = (selectedElem) => {
@@ -43,7 +43,6 @@ export default ({expected, roundOne, roundTwo}) => {
                             </Col>
                         ))}
                     </Row>
-                    
                 </div>
             </MenuEntry>
             <div id={"nav"} style={{visibility: 'hidden'}}>
@@ -52,12 +51,11 @@ export default ({expected, roundOne, roundTwo}) => {
             <style jsx>{`
                 .box {
                     padding: 18px 18px 24px;
-                    
                 }
                 .box:hover {
                     cursor: pointer;
                 }
-            `}</style>            
+            `}</style>
         </div>
-    );    
+    );
 }
