@@ -5,7 +5,10 @@ export default ({roundNumber, word}) => {
         <div>
             <MenuHeading header={"Runde " + roundNumber} />
             <div className="object_display">
-                <h3>{word}</h3>
+                <h4>{word.element}</h4>
+            </div>
+            <div className="object_display">
+                <h5>{word.description}</h5>
             </div>
             <style jsx>{`
             .object_display {
