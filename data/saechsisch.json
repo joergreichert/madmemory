@@ -1,0 +1,401 @@
+{
+    "source": "http://www.sachsenwelt.de/sachsen/mundart/woerterbuch-a.html",
+    "data": [{
+            "element": "Bäbe, Bääbe",
+            "description": "Aschkuchen (eine Art Sandkuchen bzw. Napfkuchen)"
+        }, {
+            "element": "babbeln, Gebabbel",
+            "description": "plaudern, sich oberflächlich unterhalten"
+        }, {
+            "element": "babsch, babsches",
+            "description": "weich, weiches"
+        }, {
+            "element": "Baggasche",
+            "description": "Pack, Gesindel"
+        }, {
+            "element": "barmen, bärmeln",
+            "description": "klagen, jammern"
+        }, {
+            "element": "Bammbs",
+            "description": "Brei, Mus, Babbe"
+        }, {
+            "element": "bammln",
+            "description": "hängen"
+        }, {
+            "element": "bebbln",
+            "description": "Fußball spielen"
+        }, {
+            "element": "bedeppert",
+            "description": "betroffen, verduzt, überrascht"
+        }, {
+            "element": "beduddeld",
+            "description": "betrunken, angetrunken"
+        }, {
+            "element": "beebln",
+            "description": "herumfummeln"
+        }, {
+            "element": "Bemme, Bämme",
+            "description": "(bestrichene) Brotscheibe"
+        }, {
+            "element": "bibborn",
+            "description": "zittern (z.B. vor Kälte)"
+        }, {
+            "element": "bichln",
+            "description": "einen trinken, einen heben"
+        }, {
+            "element": "Binunnsen",
+            "description": "Geld"
+        }, {
+            "element": "Bläddbredd",
+            "description": "Bügelbrett"
+        }, {
+            "element": "blähgn",
+            "description": "schreien"
+        }, {
+            "element": "Blembe, Blämbe",
+            "description": "dünner Kaffee, dünne Suppe, geschmacklose oder nicht schmeckende Flüssigkeit"
+        }, {
+            "element": "Bliemschen",
+            "description": "Kaffee mit viel Milch"
+        }, {
+            "element": "Bliemchenkaffee",
+            "description": "dünner Kaffee, Malz-, Ersatzkaffee"
+        }, {
+            "element": "Blinnsn",
+            "description": "(auch Plinsen) flacher, dünner Kuchen in Pfanne gebraten (Eierkuchen)"
+        }, {
+            "element": "Boddn",
+            "description": "große Schuhe"
+        }, {
+            "element": "boofen",
+            "description": "übernachten im Schlafsack in kleinen Höhlen oder unter Felsvorsprüngen"
+        }, {
+            "element": "Däähds",
+            "description": "Kopf"
+        }, {
+            "element": "Daheeme",
+            "description": "Zuhause"
+        }, {
+            "element": "Dämel, Dämlak",
+            "description": "Dummkopf, Trottel"
+        }, {
+            "element": "Dämse, Dähmse",
+            "description": "Gewitterschwüle, drückende Hitze"
+        }, {
+            "element": "didschn, diddschn",
+            "description": "eintunken, etwas eintauchen (und dadurch aufweichen)"
+        }, {
+            "element": "diggschn",
+            "description": "schmollen, sich trotzig verhalten"
+        }, {
+            "element": "Dieschl",
+            "description": "Tiegel, Bratpfanne"
+        }, {
+            "element": "Dreesch",
+            "description": "starker (kurzer) Regen"
+        }, {
+            "element": "dreeschen",
+            "description": "regnen"
+        }, {
+            "element": "Drähdr",
+            "description": "Schuhe"
+        }, {
+            "element": "Dussel",
+            "description": "Trottel, dumme Person, Glück, Glückpilz (Man kann entweder Dussel haben, oder ein Dussel sein. Es hat sich mittlerweile herausgestellt, dass die meisten Dussel auch noch Dussel haben.)"
+        }, {
+            "element": "dusseln, dussln",
+            "description": "ausruhen, vor sich hin träumen"
+        }, {
+            "element": "(nu) ei verbibbsch",
+            "description": "na so etwas,"
+        }, {
+            "element": "eingoofen",
+            "description": "einkaufen"
+        }, {
+            "element": "escha",
+            "description": "nicht doch (Verneinung)"
+        }, {
+            "element": "Essenkehrer",
+            "description": "Schornsteinfeger"
+        }, {
+            "element": "Fäddzn",
+            "description": "alte oder schmuddlige Kleidung"
+        }, {
+            "element": "fänsen, feensen",
+            "description": "(grundlos) weinen, heulen"
+        }, {
+            "element": "fitscheln",
+            "description": "lange und nutzlos hin- und herbewegen, z.B. mit einer Säge"
+        }, {
+            "element": "Flatschen",
+            "description": "ausgedehnter, großer Fleck"
+        }, {
+            "element": "Flebben",
+            "description": "Fahrerlaubnis in der Umgangssprache"
+        }, {
+            "element": "Fleppe",
+            "description": "trotzig, weinerlich verzogener Mund"
+        }, {
+            "element": "Flieschor",
+            "description": "Flugzeug"
+        }, {
+            "element": "Floddr Oddoh",
+            "description": "Durchfall"
+        }, {
+            "element": "Flunsch",
+            "description": "trotzig, weinerlich verzogener Mund"
+        }, {
+            "element": "Frosthucke, Frostmemme",
+            "description": "jemand der leicht friert"
+        }, {
+            "element": "fuchtig",
+            "description": "wütend, zornig"
+        }, {
+            "element": "Funnsl",
+            "description": "spärliche Beleuchtung, (Taschen-) Lampe"
+        }, {
+            "element": "Gaatschen, Gaatschn",
+            "description": "Geschwätz, Rederei, auch breites, gedehntes sprechen"
+        }, {
+            "element": "Gagsch, Gaksch",
+            "description": "Spaß, Jux, Witz, Ausgelassenheit"
+        }, {
+            "element": "gäkig",
+            "description": "blass, bleich, kränklich aussehend"
+        }, {
+            "element": "Gäsehitsche",
+            "description": "Schlitten, mickriges Auto"
+        }, {
+            "element": "Gelummbe",
+            "description": "Sachen, Gepäck"
+        }, {
+            "element": "gieksen",
+            "description": "jemandem mit einem spitzen Gegenstand stechen"
+        }, {
+            "element": "Gindr",
+            "description": "Kinder oder Günther"
+        }, {
+            "element": "gloddsn",
+            "description": "schauen, auch guggen"
+        }, {
+            "element": "Glubbschoochn",
+            "description": "(große) Augen"
+        }, {
+            "element": "Glubschn",
+            "description": "Augen"
+        }, {
+            "element": "Griebsch",
+            "description": "überrest eines gegessenen Apfels, Kerngehäuse vom Apfel"
+        }, {
+            "element": "Gunks, gunksen",
+            "description": "Stoß, stoßen"
+        }, {
+            "element": "Gusche",
+            "description": "Mund"
+        }, {
+            "element": "Hader",
+            "description": "Scheuerlappen"
+        }, {
+            "element": "hiefrig",
+            "description": "schwächlich, unterentwickelt"
+        }, {
+            "element": "Himmel(s)miezchen",
+            "description": "Marienkäfer - (in Kohrener Land, Chemnitz)"
+        }, {
+            "element": "Hitsche, Hütsche",
+            "description": "Fußbank"
+        }, {
+            "element": "Hornstsche",
+            "description": "alte Bude, kleine Wohnung"
+        }, {
+            "element": "iezig",
+            "description": "zornig, wütend"
+        }, {
+            "element": "illern",
+            "description": "heimlich, verstohlen gucken"
+        }, {
+            "element": "Käseklitscher",
+            "description": "Quarkkeulchen"
+        }, {
+            "element": "kiefig",
+            "description": "unfreundlich, böse, gereizt"
+        }, {
+            "element": "Klansch",
+            "description": "schmierige, feuchte, weiche Masse"
+        }, {
+            "element": "knatschen",
+            "description": "ständig jammern, wehleidig sein"
+        }, {
+            "element": "Kriepel",
+            "description": "Bezeichnung oder Schimpfwort für Personen, Tiere, Dinge"
+        }, {
+            "element": "krutschen",
+            "description": "sich zanken"
+        }, {
+            "element": "kutteln",
+            "description": "schnell und hastig trinken"
+        }, {
+            "element": "Laatschen",
+            "description": "Hausschuhe, Pantoffeln"
+        }, {
+            "element": "lawede, laweete",
+            "description": "instabil, wackelig"
+        }, {
+            "element": "lunschen",
+            "description": "illern, (ab)schauen"
+        }, {
+            "element": "Lursche, Lurke, Lorge",
+            "description": "mieses Getränk, dünner Kaffee"
+        }, {
+            "element": "lurksen",
+            "description": "dummes Zeug reden"
+        }, {
+            "element": "Lusche",
+            "description": "Spielkarte ohne Zählwert"
+        }, {
+            "element": "Machenses hibsch!",
+            "description": "Auf Wiedersehen!"
+        }, {
+            "element": "mären",
+            "description": "trödeln, bummeln oder langatmig erzählen"
+        }, {
+            "element": "Mauke",
+            "description": "Mus, Brei, insbesondere Kartoffelbrei"
+        }, {
+            "element": "Mauken",
+            "description": "Füße, insbesondere Stinkmauken (Stinkfüße)"
+        }, {
+            "element": "Menkenke",
+            "description": "Durcheinander, Verwirrung, Gemisch"
+        }, {
+            "element": "Modschekiebchen, Modschegiebchen (Mutschegiebchen)",
+            "description": "Marienkäfer"
+        }, {
+            "element": "Muckefuck",
+            "description": "Ersatzkaffee, dünner Bohnenkaffee"
+        }, {
+            "element": "muddeln",
+            "description": "langsam, nicht zielstrebig arbeiten"
+        }, {
+            "element": "Muzel",
+            "description": "Staubflocke, kleines Fussel, kleine Feder"
+        }, {
+            "element": "muzeln",
+            "description": "fusseln"
+        }, {
+            "element": "ningeln",
+            "description": "ständig leise weinen, kläglich jammern"
+        }, {
+            "element": "Nischl, Nischel",
+            "description": "Kopf"
+        }, {
+            "element": "nu",
+            "description": "ja"
+        }, {
+            "element": "nuddeln",
+            "description": "schlechte Musik machen, es läuft so vor sich hin"
+        }, {
+            "element": "ooch",
+            "description": "auch"
+        }, {
+            "element": "Oochn",
+            "description": "Augen"
+        }, {
+            "element": "Palaver",
+            "description": "Gerede, Geschwätz"
+        }, {
+            "element": "pietschen, biedschen",
+            "description": "einen trinken"
+        }, {
+            "element": "Plinse(n)",
+            "description": "flacher, dünner Eieruchen in Pfanne gebraten"
+        }, {
+            "element": "Raasche",
+            "description": "Jähzorn, Aufregung, Wut"
+        }, {
+            "element": "Rabbaz",
+            "description": "Unruhe, Lärm machen"
+        }, {
+            "element": "Radschoh, Rahdscho",
+            "description": "Radio"
+        }, {
+            "element": "Ränftel",
+            "description": "Anfangs- und Endstück des Brotes"
+        }, {
+            "element": "rankern",
+            "description": "unruhig sitzen oder liegen"
+        }, {
+            "element": "Rennsämmln",
+            "description": "Sportschuhe"
+        }, {
+            "element": "rumblähgn",
+            "description": "herumschreien"
+        }, {
+            "element": "rumguddschn",
+            "description": "(mit Auto) unterwegs sein"
+        }, {
+            "element": "rumwursteln, rumwurschteln",
+            "description": "kramen, etwas machen"
+        }, {
+            "element": "Runks",
+            "description": "ungehobelter Kerl, Grobian"
+        }, {
+            "element": "Schderze",
+            "description": "Topfdeckel"
+        }, {
+            "element": "Schebbdäggl",
+            "description": "Schirmmütze"
+        }, {
+            "element": "Schlaz",
+            "description": "großer Riß im Gewebe"
+        }, {
+            "element": "Schmieche",
+            "description": "Gliedermaßstab (Zollstock)"
+        }, {
+            "element": "Schpeggfedd",
+            "description": "Speckfett"
+        }, {
+            "element": "Schpeggfeddbämme",
+            "description": "Speckfettbrotscheibe, Schmalzbrotscheibe"
+        }, {
+            "element": "Schulldchnsä",
+            "description": "Entschuldigung"
+        }, {
+            "element": "schwäbborn",
+            "description": "vergießen, was verschütten"
+        }, {
+            "element": "schwoofen",
+            "description": "ausgehen, tanzen gehen"
+        }, {
+            "element": "spillerig",
+            "description": "schwächlich, mager"
+        }, {
+            "element": "Striezel",
+            "description": "Weihnachtsstollen"
+        }, {
+            "element": "trieseln",
+            "description": "Getricktes auftrennen"
+        }, {
+            "element": "urschn, urscheln",
+            "description": "verschwenderisch mit etwas umgehen"
+        }, {
+            "element": "verblembern",
+            "description": "etwas vergeuden, sinnlos vertun (z.B. Zeit)"
+        }, {
+            "element": "vorrsiebd",
+            "description": "verlegt, verbummelt"
+        }, {
+            "element": "(dä) wännsdorr",
+            "description": "die Kinder"
+        }, {
+            "element": "wemr",
+            "description": "wenn man"
+        }, {
+            "element": "zecken, zeckeln",
+            "description": "sich gegenseitig oder jemanden necken, ärgern"
+        }, {
+            "element": "zordeppern",
+            "description": "zerstören, etwas kaputt machen"
+        }
+    ]
+}

@@ -1,4 +1,4 @@
-import { data } from '../../data/woerterbuch.json'
+import { data } from '../../data/rheinisch.json'
 import Frame from '../../components/frame';
 import RoundOne from '../../components/game/round_one'
 import { connect, useSelector } from 'react-redux'

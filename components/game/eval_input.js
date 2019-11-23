@@ -7,8 +7,8 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
 export default ({expected, roundOne, roundTwo}) => {
-    const set = new Set(roundOne);
-    roundTwo.forEach(elem => set.add(elem));
+    const set = new Set(roundOne.map(entry => entry.element));
+    roundTwo.forEach(elem => set.add(elem.element));
     const shuffled = moveRandomSelectionToTarget([...set], set.size).selected
     let hasSelected = false
 
@@ -17,9 +17,9 @@ export default ({expected, roundOne, roundTwo}) => {
             return
         }
         hasSelected = true
-        const expectedId = "word-" + shuffled.indexOf(expected)
+        const expectedId = "word-" + shuffled.indexOf(expected.element)
         document.getElementById(expectedId).style.background = "green"
-        if (selectedElem != expected) {
+        if (selectedElem != expected.element) {
             const wrongId = "word-" + shuffled.indexOf(selectedElem)
             document.getElementById(wrongId).style.background = "red"
         }
