@@ -4,12 +4,12 @@ import { useIndex } from '../../lib/game/useindex';
 import ObjectDisplay from './object_display'
 import EvalInput from './eval_input'
 
-const RoundTwo = ({roundOneState}) => {
+const RoundTwo = ({ settings, roundOneState }) => {
     const roundTwoState = useMemo(() => roundTwoObjects(roundOneState), [roundOneState]);
     const roundTwo = roundTwoState.selected
-    const wordCount = roundTwo.length
+    const wordCount = settings.elementCount
     const roundOneElement = roundTwoState.duplicate
-    const index = useIndex("roundTwo", wordCount)
+    const index = useIndex(settings)
     if (index < wordCount) {
         return (
             <ObjectDisplay roundNumber={"2"} word={roundTwo[index]} />

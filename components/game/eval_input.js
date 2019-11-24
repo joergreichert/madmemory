@@ -32,7 +32,7 @@ export default ({expected, roundOne, roundTwo}) => {
                 <div>
                     <Row>
                         {shuffled.map(elem => (
-                            <Col xs={6} md={4}>
+                            <Col xs={6} md={4} key={"col-" + shuffled.indexOf(elem)}>
                                 <div
                                     id={"word-" + shuffled.indexOf(elem)}
                                     className={"box"}
