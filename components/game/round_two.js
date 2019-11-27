@@ -7,10 +7,10 @@ import EvalInput from './eval_input'
 const RoundTwo = ({ settings, roundOneState }) => {
   const roundTwoState = useMemo(() => roundTwoObjects(roundOneState), [roundOneState]);
   const roundTwo = roundTwoState.selected
-  const wordCount = settings.elementCount
+  const elementCount = settings.elementCount
   const roundOneElement = roundTwoState.duplicate
   const index = useIndex(settings)
-  if (index < wordCount) {
+  if (index < elementCount) {
     return (
       <ObjectDisplay roundNumber={"2"} word={roundTwo[index]} />
     );

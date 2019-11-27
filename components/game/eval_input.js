@@ -48,14 +48,6 @@ export default ({ expected, roundOne, roundTwo }) => {
       <div id={"nav"} style={{ visibility: 'hidden' }}>
         <MenuButton link='../index' label='Hauptmenü' />
       </div>
-      <style jsx>{`
-        .box {
-            padding: 18px 18px 24px;
-        }
-        .box:hover {
-            cursor: pointer;
-        }
-      `}</style>
     </div>
   );
 }

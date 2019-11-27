@@ -7,9 +7,9 @@ import RoundTwo from './round_two'
 const RoundOne = ({ settings, data }) => {
   const roundOneState = useMemo(() => roundOneObjects({ settings, data }), ["fix"]);
   const roundOne = roundOneState.selected
-  const wordCount = roundOne.length
+  const elementCount = roundOne.length
   const index = useIndex(settings)
-  if (index < wordCount) {
+  if (index < elementCount) {
     return (
       <ObjectDisplay roundNumber={"1"} word={roundOne[index]} />
     );
