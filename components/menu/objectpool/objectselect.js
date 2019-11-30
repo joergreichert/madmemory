@@ -1,3 +1,4 @@
+import Container from 'react-bootstrap/Container'
 import React from 'react';
 import { connect, useSelector, useDispatch } from 'react-redux'
 import { useState } from 'react';
@@ -23,7 +24,7 @@ const ObjectSelect = ({ value, label, sourceURL }) => {
     )
   }
   return (
-    <div className="form-check">
+    <Container className="form-check">
       <label>
         <input
           key={value}
@@ -36,7 +37,7 @@ const ObjectSelect = ({ value, label, sourceURL }) => {
         />
         {label} (<a href={sourceURL}>Quelle</a>)
       </label>
-    </div>
+    </Container>
   )
 }
 export default connect()(ObjectSelect)

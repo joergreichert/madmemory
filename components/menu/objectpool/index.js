@@ -1,3 +1,4 @@
+import Container from 'react-bootstrap/Container'
 import MenuButton from '../button'
 import MenuEntry from '../entry'
 import MenuHeading from '../heading'
@@ -5,7 +6,7 @@ import ObjectSelect from './objectselect'
 import { selectableElements } from '../../../lib/constants'
 
 export default () => (
-  <div>
+  <Container>
     <MenuHeading header="Objekt-Auswahl" />
     <MenuEntry>
       <form>
@@ -16,5 +17,5 @@ export default () => (
       </form>
     </MenuEntry>
     <MenuButton link='./' label='Zurück' />
-  </div>
+  </Container>
 )

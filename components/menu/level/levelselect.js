@@ -1,4 +1,5 @@
 import React from 'react';
+import Container from 'react-bootstrap/Container'
 import { connect, useSelector, useDispatch } from 'react-redux'
 import { setLevel } from '../../../lib/actions'
 import { EASY_LEVEL } from '../../../lib/constants'
@@ -7,7 +8,7 @@ const LevelSelect = ({ value, label }) => {
   const level = useSelector(state => state.settings ? state.settings.selectedLevel : EASY_LEVEL.key)
   const dispatch = useDispatch();
   return (
-    <div className="form-check">
+    <Container className="form-check">
       <label>
         <input
           type="radio"
@@ -19,7 +20,7 @@ const LevelSelect = ({ value, label }) => {
         />
         {label}
       </label>
-    </div>
+    </Container>
   )
 }
 export default connect()(LevelSelect)

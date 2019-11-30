@@ -1,8 +1,9 @@
+import Container from 'react-bootstrap/Container'
 import MenuEntry from './button'
 
 export default () => (
-  <div>
+  <Container>
     <MenuEntry link='./game/words' label='Spielen' />
     <MenuEntry link='./settings' label='Einstellungen' />
-  </div>
+  </Container>
 )
