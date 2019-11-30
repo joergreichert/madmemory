@@ -1,5 +1,5 @@
 import Frame from '../../components/frame';
-import RoundOne from '../../components/game/round_one'
+import RoundOneStartScreen from '../../components/game/round_one_startscreen'
 import { connect, useSelector } from 'react-redux'
 import { EASY_LEVEL } from '../../lib/constants'
 
@@ -12,7 +12,7 @@ const WordsGame = () => {
   }
   return (
     <Frame>
-      <RoundOne settings={settings} data={data} />
+      <RoundOneStartScreen settings={settings} data={data} />
     </Frame>
   );
 }
