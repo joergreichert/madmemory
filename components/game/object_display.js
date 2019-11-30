@@ -48,7 +48,7 @@ export default ({ level, roundNumber, item, timeout, itemIndex, totalCount }) =>
           <Col xs={3} md={3}>
             <div className={"stats"}>
               <div className={"label"}>Element</div>
-              <div className={"value"}>{`${itemIndex} von ${totalCount}`}</div>
+              <div className={"value"}>{`${itemIndex}/${totalCount}`}</div>
             </div>
           </Col>
           <Col xs={3} md={3}>
