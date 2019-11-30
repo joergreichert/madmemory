@@ -41,7 +41,7 @@ export default ({ level, data, settings, expected, roundOne, roundTwo }) => {
       data={data}
     />
   }
-  const selectionListHeight = dimensions.height * 0.6 < 150 ? 150 : dimensions.height * 0.6
+  const selectionListHeight = dimensions.height * 0.6 < 250 ? 250 : dimensions.height * 0.6
   return (
     <Container ref={targetRef}>
       <MenuHeading header={"Klicke auf das Wort, welches doppelt vorkam"} />
