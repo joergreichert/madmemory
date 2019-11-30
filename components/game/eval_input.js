@@ -56,7 +56,7 @@ export default ({ level, data, settings, expected, roundOne, roundTwo }) => {
           </Row>
         </div>
       </MenuEntry>
-      { actual && expected.element !== actual && <div id={"nav"}>
+      { actual && expected.element !== actual && <div>
         <MenuButton link='../index' label='Hauptmenü' />
       </div>}
       { actual && expected.element === actual && <div

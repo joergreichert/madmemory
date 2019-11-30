@@ -1,3 +1,10 @@
+.at-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
 .box {
   padding: 9px 9px 12px;
 }
@@ -41,7 +48,7 @@
   justify-content: space-around;
 }
 
-.hero {
+.frame {
   width: 100%;
   color: #333;
 }
@@ -52,9 +59,8 @@
   100%{background-position:0% 50%}
 }
 
-.object_display {
+.object_display_item {
   max-width: 880px;
-  margin: 80px auto 40px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -66,20 +72,35 @@
   color: #434343;
 }
 
-.object_display h4 {
+.object_display_item h4 {
   margin: 0;
   color: #067df7;
   font-size: 72px;
+  text-overflow: ellipsis;
+  overflow: visible;
+  white-space: wrap;
+}
+
+.stats .label {
+  font-weight: bold;
+}
+
+.stats .value {
+  font-weight: normal;
 }
 
 .title {
   margin: 0;
   width: 100%;
-  padding-top: 80px;
+  padding-top: 20px;
   line-height: 1.15;
   font-size: 48px;
 }
 
-.title, .description {
+.description {
+  padding-bottom: 20px;
+}
+
+.title, .description, .stats {
   text-align: center;
 }
