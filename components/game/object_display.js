@@ -2,46 +2,19 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import useCountDown from '../../lib/game/useCountDown';
-import React, { useRef, useEffect, useLayoutEffect, useState } from "react";
+import React, { useRef } from "react";
+import { Scrollbar } from  'react-scrollbars-custom'
+import useDimension from '../../lib/game/useDimension';
+import calcFontSize from '../../lib/game/calcFontSize';
 
 export default ({ level, roundNumber, item, timeout, itemIndex, totalCount }) => {
   const remainingSeconds = timeout && useCountDown(timeout)
   const targetRef = useRef();
-  const [dimensions, setDimensions] = useState({ width:0, height: 0 });
-  let resizeTimer = null;
-  const resetTimeout = 100;
-  const refreshDimensions = () => {
-    if (targetRef.current) {
-      const { offsetWidth, offsetHeight } = targetRef.current
-      setDimensions({width: offsetWidth, height: offsetHeight})
-    }
-  }
-  useLayoutEffect(() => {
-    refreshDimensions();
-  }, [])
-  useEffect(() => {
-    window.addEventListener('resize', () => {
-      clearInterval(resizeTimer);
-      resizeTimer = setTimeout(refreshDimensions, resetTimeout);
-    });
-  }, []);
-  const textLen = item.element ? item.element.length : 0
-  const fontSizePx = 12
-  const fontSizePxMax = 72
-  const letterCountFactor = 6
-  const currentSize = textLen * letterCountFactor
-  const fontSizeFactor = 2 / Math.log1p(textLen)
-  let targetFontSize = fontSizePx;
-  let counter = 1
-  while (currentSize + (counter * currentSize * fontSizeFactor) < dimensions.width) {
-    counter++
-    if (targetFontSize >= fontSizePxMax) {
-      break;
-    }
-    targetFontSize += counter
-  }
+  const dimensions = useDimension(targetRef)
+  const textBoxHeight = dimensions.height * 0.6 < 100 ? 100 : dimensions.height * 0.6
+  const targetFontSize = calcFontSize({text: item.element, dimensions});
   return (
-    <Container>
+    <Container ref={targetRef}>
       <Row>
         <Col xs={12} md={12}>
           <div className="object_display_item">
@@ -51,13 +24,11 @@ export default ({ level, roundNumber, item, timeout, itemIndex, totalCount }) =>
       </Row>
       <Row>
         <Col xs={12} md={12}>
-        <div ref={targetRef}>
-      <p>width: {dimensions.width}</p>
-      <p>height: {dimensions.height}</p>
-    </div>
-          <div className="object_display_description"
-            dangerouslySetInnerHTML={{__html: item.description}}
-          />
+          <Scrollbar style={{ height: textBoxHeight }}>
+            <div className="object_display_description"
+              dangerouslySetInnerHTML={{__html: item.description}}
+            />
+          </Scrollbar>
         </Col>
       </Row>
       { itemIndex && totalCount && remainingSeconds && level && roundNumber &&

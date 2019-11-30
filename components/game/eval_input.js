@@ -1,3 +1,4 @@
+import Container from 'react-bootstrap/Container'
 import { moveRandomSelectionToTarget } from '../../lib/game/objectstate'
 import MenuHeading from '../menu/heading'
 import MenuEntry from '../menu/entry'
@@ -5,8 +6,10 @@ import MenuButton from '../menu/button'
 import Box from '../menu/box'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useRef } from 'react';
 import RoundOne from './round_one'
+import useDimension from '../../lib/game/useDimension';
+import { Scrollbar } from  'react-scrollbars-custom'
 
 export default ({ level, data, settings, expected, roundOne, roundTwo }) => {
   const [actual, setActual] = useState()
@@ -16,6 +19,8 @@ export default ({ level, data, settings, expected, roundOne, roundTwo }) => {
     roundTwo.forEach(elem => set.add(elem.element));
     return moveRandomSelectionToTarget([...set], set.size).selected
   }, [roundTwo])
+  const targetRef = useRef();
+  const dimensions = useDimension(targetRef)
 
   const selectionState = (elem) => {
     if (actual) {
@@ -36,26 +41,29 @@ export default ({ level, data, settings, expected, roundOne, roundTwo }) => {
       data={data}
     />
   }
+  const selectionListHeight = dimensions.height * 0.6 < 150 ? 150 : dimensions.height * 0.6
   return (
-    <div>
+    <Container ref={targetRef}>
       <MenuHeading header={"Klicke auf das Wort, welches doppelt vorkam"} />
-      <MenuEntry>
-        <div>
-          <Row>
-            {shuffled.map(elem => (
-              <Col xs={6} md={4} key={"col-" + shuffled.indexOf(elem)}>
-                <div
-                  id={"word-" + shuffled.indexOf(elem)}
-                  className={"box " + selectionState(elem) }
-                  onClick={() => setActual(elem)}
-                >
-                  <Box label={elem} />
-                </div>
-              </Col>
-            ))}
-          </Row>
-        </div>
-      </MenuEntry>
+      <Scrollbar style={{height: selectionListHeight }}>
+        <MenuEntry>
+          <div>
+            <Row>
+              {shuffled.map(elem => (
+                <Col xs={12} md={4} key={"col-" + shuffled.indexOf(elem)}>
+                  <div
+                    id={"word-" + shuffled.indexOf(elem)}
+                    className={"box " + selectionState(elem) }
+                    onClick={() => setActual(elem)}
+                  >
+                    <Box label={elem} />
+                  </div>
+                </Col>
+              ))}
+            </Row>
+          </div>
+        </MenuEntry>
+      </Scrollbar>
       { actual && expected.element !== actual && <div>
         <MenuButton link='../index' label='Hauptmenü' />
       </div>}
@@ -65,6 +73,6 @@ export default ({ level, data, settings, expected, roundOne, roundTwo }) => {
       >
         <Box label={"Auf zur nächsten Etappe"} />
       </div>}
-    </div>
+    </Container>
   );
 }
