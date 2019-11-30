@@ -11,7 +11,7 @@ export default ({ level, roundNumber, item, timeout, itemIndex, totalCount }) =>
   const remainingSeconds = timeout && useCountDown(timeout)
   const targetRef = useRef();
   const dimensions = useDimension(targetRef)
-  const textBoxHeight = dimensions.height * 0.6 < 100 ? 100 : dimensions.height * 0.6
+  const textBoxHeight = dimensions.height * 0.6 < 200 ? 200 : dimensions.height * 0.6
   const targetFontSize = calcFontSize({text: item.element, dimensions});
   return (
     <Container ref={targetRef}>
