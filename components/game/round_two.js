@@ -4,26 +4,33 @@ import useIndex from '../../lib/game/useindex';
 import ObjectDisplay from './object_display'
 import EvalInput from './eval_input'
 
-const RoundTwo = ({ settings, roundOneState }) => {
+const RoundTwo = ({ level, data, settings, roundOneState }) => {
   const roundTwoState = useMemo(() => roundTwoObjects(roundOneState), [roundOneState]);
   const roundTwo = roundTwoState.selected
   const elementCount = settings.elementCount
   const roundOneElement = roundTwoState.duplicate
-  const index = useIndex(settings)
-  if (index < elementCount) {
+  const index = useIndex({...settings, level})
+  if (index[level] < elementCount) {
     return (
       <ObjectDisplay
-        level={1}
+        level={level}
         roundNumber={2}
-        item={roundTwo[index]}
+        item={roundTwo[index[level]]}
         timeout={settings.displayTime}
-        itemIndex={index+1}
+        itemIndex={index[level]+1}
         totalCount={settings.elementCount}
       />
     );
   } else {
     return (
-      <EvalInput expected={roundOneElement} roundOne={roundOneState.selected} roundTwo={roundTwo} />
+      <EvalInput
+        level={level}
+        data={data}
+        settings={settings}
+        expected={roundOneElement}
+        roundOne={roundOneState.selected}
+        roundTwo={roundTwo}
+      />
     );
   }
 }

@@ -2,12 +2,12 @@ import useIndex from '../../lib/game/useindex';
 import ObjectDisplay from './object_display'
 import RoundOne from './round_one'
 
-const RoundOneStartScreen = ({ settings, data }) => {
-  const index = useIndex({elementCount: 2, displayTime: 2000})
-  if (index === 0) {
+const RoundOneStartScreen = ({ level, settings, data }) => {
+  const index = useIndex({elementCount: 2, displayTime: 2000, level})
+  if (index[level] === 0) {
     return (
       <ObjectDisplay
-        roundNumber={"1"}
+        level={"1"}
         item={{
           element: "Runde 1",
           description: `Merke Dir die folgenden ${settings.elementCount} Elemente`
@@ -15,7 +15,11 @@ const RoundOneStartScreen = ({ settings, data }) => {
     );
   } else {
     return (
-      <RoundOne settings={settings} data={data} />
+      <RoundOne
+        level={level}
+        settings={settings}
+        data={data}
+      />
     );
   }
 }

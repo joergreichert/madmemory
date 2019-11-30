@@ -12,7 +12,11 @@ const WordsGame = () => {
   }
   return (
     <Frame>
-      <RoundOneStartScreen settings={settings} data={data} />
+      <RoundOneStartScreen
+        level={1}
+        settings={settings}
+        data={data}
+      />
     </Frame>
   );
 }

@@ -5,26 +5,37 @@ import MenuButton from '../menu/button'
 import Box from '../menu/box'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import { useState, useMemo } from 'react';
+import RoundOne from './round_one'
 
-export default ({ expected, roundOne, roundTwo }) => {
-  const set = new Set(roundOne.map(entry => entry.element));
-  roundTwo.forEach(elem => set.add(elem.element));
-  const shuffled = moveRandomSelectionToTarget([...set], set.size).selected
-  let hasSelected = false
+export default ({ level, data, settings, expected, roundOne, roundTwo }) => {
+  const [actual, setActual] = useState()
+  const [advanceToNextLevel, setAdvanceToNextLevel] = useState(false)
+  const shuffled = useMemo(() => {
+    const set = new Set(roundOne.map(entry => entry.element));
+    roundTwo.forEach(elem => set.add(elem.element));
+    return moveRandomSelectionToTarget([...set], set.size).selected
+  }, [roundTwo])
 
-  const selectWord = (selectedElem) => {
-    if (hasSelected) {
-      return
+  const selectionState = (elem) => {
+    if (actual) {
+      if (actual === elem) {
+        return expected.element === actual ? "correct-selection" : "wrong-selection"
+      } else if (expected.element === elem) {
+        return "correct-selection"
+      }
     }
-    hasSelected = true
-    const expectedId = "word-" + shuffled.indexOf(expected.element)
-    document.getElementById(expectedId).style.background = "green"
-    if (selectedElem != expected.element) {
-      const wrongId = "word-" + shuffled.indexOf(selectedElem)
-      document.getElementById(wrongId).style.background = "red"
-    }
-    document.getElementById("nav").style.visibility = "visible"
-  };
+    return "";
+  }
+  if (advanceToNextLevel) {
+    return <RoundOne
+      level={level+1}
+      settings={{...settings,
+        elementCount: settings.elementCount + (level + 5)
+      }}
+      data={data}
+    />
+  }
   return (
     <div>
       <MenuHeading header={"Klicke auf das Wort, welches doppelt vorkam"} />
@@ -35,8 +46,8 @@ export default ({ expected, roundOne, roundTwo }) => {
               <Col xs={6} md={4} key={"col-" + shuffled.indexOf(elem)}>
                 <div
                   id={"word-" + shuffled.indexOf(elem)}
-                  className={"box"}
-                  onClick={() => selectWord(elem)}
+                  className={"box " + selectionState(elem) }
+                  onClick={() => setActual(elem)}
                 >
                   <Box label={elem} />
                 </div>
@@ -45,9 +56,15 @@ export default ({ expected, roundOne, roundTwo }) => {
           </Row>
         </div>
       </MenuEntry>
-      <div id={"nav"} style={{ visibility: 'hidden' }}>
+      { actual && expected.element !== actual && <div id={"nav"}>
         <MenuButton link='../index' label='Hauptmenü' />
-      </div>
+      </div>}
+      { actual && expected.element === actual && <div
+        className={"box"}
+        onClick={() => setAdvanceToNextLevel(true)}
+      >
+        <Box label={"Auf zur nächsten Etappe"} />
+      </div>}
     </div>
   );
 }

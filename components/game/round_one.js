@@ -4,25 +4,30 @@ import useIndex from '../../lib/game/useindex';
 import ObjectDisplay from './object_display'
 import RoundTwoStartScreen from './round_two_startscreen'
 
-const RoundOne = ({ settings, data }) => {
-  const roundOneState = useMemo(() => roundOneObjects({ settings, data }), ["fix"]);
+const RoundOne = ({ level, settings, data }) => {
+  const roundOneState = useMemo(() => roundOneObjects({ settings, data }), [level]);
   const roundOne = roundOneState.selected
   const elementCount = roundOne.length
-  const index = useIndex(settings)
-  if (index < elementCount) {
+  const index = useIndex({...settings, level})
+  if (index[level] < elementCount) {
     return (
       <ObjectDisplay
-        level={1}
+        level={level}
         roundNumber={1}
-        item={roundOne[index]}
+        item={roundOne[index[level]]}
         timeout={settings.displayTime}
-        itemIndex={index+1}
+        itemIndex={index[level]+1}
         totalCount={settings.elementCount}
       />
     );
   } else {
     return (
-      <RoundTwoStartScreen settings={settings} roundOneState={roundOneState} />
+      <RoundTwoStartScreen
+        level={level}
+        data={data}
+        settings={settings}
+        roundOneState={roundOneState}
+      />
     );
   }
 }
