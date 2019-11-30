@@ -35,26 +35,26 @@ export default ({ level, roundNumber, item, timeout, itemIndex, totalCount }) =>
         <Row className={"justify-content-center at-bottom"}>
           <Col xs={3} md={3}>
             <div className={"stats"}>
-              <div className={"stats label"}>Etappe</div>
-              <div className={"stats value"}>{level}</div>
+              <div className={"label"}>Etappe</div>
+              <div className={"value"}>{level}</div>
             </div>
           </Col>
           <Col xs={3} md={3}>
             <div className={"stats"}>
-              <div className={"stats label"}>Runde</div>
-              <div className={"stats value"}>{roundNumber}</div>
+              <div className={"label"}>Runde</div>
+              <div className={"value"}>{roundNumber}</div>
             </div>
           </Col>
           <Col xs={3} md={3}>
             <div className={"stats"}>
-              <div className={"stats label"}>Element</div>
-              <div className={"stats value"}>{`${itemIndex} von ${totalCount}`}</div>
+              <div className={"label"}>Element</div>
+              <div className={"value"}>{`${itemIndex} von ${totalCount}`}</div>
             </div>
           </Col>
           <Col xs={3} md={3}>
             <div className={"stats"}>
-              <div className={"stats label"}>nächstes in</div>
-              <div className={"stats value"}>{`${remainingSeconds} s`}</div>
+              <div className={"label"}>nächstes</div>
+              <div className={"value"}>{`${remainingSeconds} s`}</div>
             </div>
           </Col>
         </Row>
