@@ -11,7 +11,7 @@ const RoundTwoStartScreen = ({ settings, roundOneState }) => {
         roundNumber={"2"}
         word={{
           element: "Runde 2",
-          description: `Eines der folgenden ${settings.elementCount} Elemente wurde in der ersten Runde schon gezeigt. ${<br />}Finde heraus welches.`
+          description: `Eines der folgenden ${settings.elementCount} Elemente wurde in der ersten Runde schon gezeigt. <br />Finde heraus welches.`
         }} />
     );
   } else {

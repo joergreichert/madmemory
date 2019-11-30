@@ -7,7 +7,7 @@ export default ({ roundNumber, word }) => {
         <h4>{word.element}</h4>
       </div>
       <div className="object_display">
-        <h5>{word.description}</h5>
+        <h5 dangerouslySetInnerHTML={{__html: word.description}}></h5>
       </div>
     </div>
   );

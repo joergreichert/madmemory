@@ -27,7 +27,7 @@ export default ({ expected, roundOne, roundTwo }) => {
   };
   return (
     <div>
-      <MenuHeading header={"Klicken Sie auf das Wort, welches doppelt vorkam"} />
+      <MenuHeading header={"Klicke auf das Wort, welches doppelt vorkam"} />
       <MenuEntry>
         <div>
           <Row>
