@@ -1,4 +1,4 @@
-import { useIndex } from '../../lib/game/useindex';
+import useIndex from '../../lib/game/useindex';
 import ObjectDisplay from './object_display'
 import RoundOne from './round_one'
 
@@ -8,7 +8,7 @@ const RoundOneStartScreen = ({ settings, data }) => {
     return (
       <ObjectDisplay
         roundNumber={"1"}
-        word={{
+        item={{
           element: "Runde 1",
           description: `Merke Dir die folgenden ${settings.elementCount} Elemente`
         }} />

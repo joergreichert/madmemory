@@ -1,4 +1,4 @@
-import { useIndex } from '../../lib/game/useindex';
+import useIndex from '../../lib/game/useindex';
 import ObjectDisplay from './object_display'
 import RoundTwo from './round_two'
 
@@ -9,7 +9,7 @@ const RoundTwoStartScreen = ({ settings, roundOneState }) => {
     return (
       <ObjectDisplay
         roundNumber={"2"}
-        word={{
+        item={{
           element: "Runde 2",
           description: `Eines der folgenden ${settings.elementCount} Elemente wurde in der ersten Runde schon gezeigt. <br />Finde heraus welches.`
         }} />

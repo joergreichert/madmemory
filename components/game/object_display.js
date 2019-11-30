@@ -1,13 +1,26 @@
-import MenuHeading from '../menu/heading'
+import useCountDown from '../../lib/game/useCountDown';
 
-export default ({ roundNumber, word }) => {
+export default ({ level, roundNumber, item, timeout, itemIndex, totalCount }) => {
+  const remainingSeconds = timeout && useCountDown(timeout)
   return (
     <div>
-      <div className="object_display">
-        <h4>{word.element}</h4>
+      { itemIndex && totalCount && <div>
+        {`${itemIndex} / ${totalCount}`}
+      </div> }
+      { remainingSeconds && <div>
+        {`${remainingSeconds} s`}
+      </div> }
+      { level && <div className="level_display">
+        {`Etappe ${level}`}
+      </div>}
+      { roundNumber && <div className="roundNumber_display">
+        {`Runde ${roundNumber}`}
+      </div>}
+      <div className="item_display">
+        {item.element}
       </div>
-      <div className="object_display">
-        <h5 dangerouslySetInnerHTML={{__html: word.description}}></h5>
+      <div className="description_display">
+        <h5 dangerouslySetInnerHTML={{__html: item.description}}></h5>
       </div>
     </div>
   );

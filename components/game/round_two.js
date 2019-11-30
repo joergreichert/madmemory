@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import { roundTwoObjects } from '../../lib/game/objectstate'
-import { useIndex } from '../../lib/game/useindex';
+import useIndex from '../../lib/game/useindex';
 import ObjectDisplay from './object_display'
 import EvalInput from './eval_input'
 
@@ -12,7 +12,14 @@ const RoundTwo = ({ settings, roundOneState }) => {
   const index = useIndex(settings)
   if (index < elementCount) {
     return (
-      <ObjectDisplay roundNumber={"2"} word={roundTwo[index]} />
+      <ObjectDisplay
+        level={1}
+        roundNumber={2}
+        item={roundTwo[index]}
+        timeout={settings.displayTime}
+        itemIndex={index+1}
+        totalCount={settings.elementCount}
+      />
     );
   } else {
     return (
