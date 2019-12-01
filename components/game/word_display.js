@@ -6,12 +6,14 @@ import React, { useRef } from "react";
 import { Scrollbar } from  'react-scrollbars-custom'
 import useDimension from '../../lib/game/useDimension';
 import calcFontSize from '../../lib/game/calcFontSize';
+import Stats from './stats';
 
 export default ({ level, roundNumber, item, timeout, itemIndex, totalCount }) => {
   const remainingSeconds = timeout && useCountDown(timeout)
   const targetRef = useRef();
   const dimensions = useDimension(targetRef)
-  const textBoxHeight = dimensions.height * 0.6 < 250 ? 250 : dimensions.height * 0.6
+  const potTextBoxHeight = dimensions.height * 0.6
+  const textBoxHeight = potTextBoxHeight < 250 ? 250 : potTextBoxHeight
   const targetFontSize = calcFontSize({text: item.element, dimensions});
   return (
     <Container ref={targetRef}>
@@ -32,32 +34,9 @@ export default ({ level, roundNumber, item, timeout, itemIndex, totalCount }) =>
         </Col>
       </Row>
       { itemIndex && totalCount && remainingSeconds && level && roundNumber &&
-        <Row className={"justify-content-center at-bottom"}>
-          <Col xs={3} md={3}>
-            <div className={"stats"}>
-              <div className={"label"}>Etappe</div>
-              <div className={"value"}>{level}</div>
-            </div>
-          </Col>
-          <Col xs={3} md={3}>
-            <div className={"stats"}>
-              <div className={"label"}>Runde</div>
-              <div className={"value"}>{roundNumber}</div>
-            </div>
-          </Col>
-          <Col xs={3} md={3}>
-            <div className={"stats"}>
-              <div className={"label"}>Element</div>
-              <div className={"value"}>{`${itemIndex}/${totalCount}`}</div>
-            </div>
-          </Col>
-          <Col xs={3} md={3}>
-            <div className={"stats"}>
-              <div className={"label"}>nächstes</div>
-              <div className={"value"}>{`${remainingSeconds} s`}</div>
-            </div>
-          </Col>
-        </Row>
+        <Stats itemIndex={itemIndex} totalCount={totalCount}
+           remainingSeconds={remainingSeconds} level={level}
+           roundNumber={roundNumber} />
       }
     </Container>
   );

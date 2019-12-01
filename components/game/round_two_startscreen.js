@@ -1,5 +1,5 @@
 import useIndex from '../../lib/game/useindex';
-import ObjectDisplay from './object_display'
+import WordDisplay from './word_display'
 import RoundTwo from './round_two'
 
 const RoundTwoStartScreen = ({ level, data, settings, roundOneState }) => {
@@ -7,7 +7,7 @@ const RoundTwoStartScreen = ({ level, data, settings, roundOneState }) => {
   console.log("werde ich aufgerufen")
   if (index[level] === 0) {
     return (
-      <ObjectDisplay
+      <WordDisplay
         roundNumber={"2"}
         item={{
           element: "Runde 2",

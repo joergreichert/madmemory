@@ -10,24 +10,28 @@ import { useState, useMemo, useRef } from 'react';
 import RoundOne from './round_one'
 import useDimension from '../../lib/game/useDimension';
 import { Scrollbar } from  'react-scrollbars-custom'
+import Emoji from 'a11y-react-emoji'
 
 export default ({ level, data, settings, expected, roundOne, roundTwo }) => {
   const [actual, setActual] = useState()
   const [advanceToNextLevel, setAdvanceToNextLevel] = useState(false)
+  const itemLabel = item => item.element ? item.element : item.label
   const shuffled = useMemo(() => {
-    const set = new Set(roundOne.map(entry => entry.element));
-    roundTwo.forEach(elem => set.add(elem.element));
+    const set = new Set(roundOne.map(entry => itemLabel(entry)));
+    roundTwo.forEach(elem => set.add(itemLabel(elem)));
     return moveRandomSelectionToTarget([...set], set.size).selected
   }, [roundTwo])
   const targetRef = useRef();
   const dimensions = useDimension(targetRef)
 
+  const isCorrectSelection = (elem) => itemLabel(expected) === elem
   const selectionState = (elem) => {
     if (actual) {
+      const correctSelection = isCorrectSelection(elem)
       if (actual === elem) {
-        return expected.element === actual ? "correct-selection" : "wrong-selection"
-      } else if (expected.element === elem) {
-        return "correct-selection"
+        return correctSelection ? "selection-correct" : "selection-wrong"
+      } else if (correctSelection) {
+        return "selection-correct"
       }
     }
     return "";
@@ -44,7 +48,7 @@ export default ({ level, data, settings, expected, roundOne, roundTwo }) => {
   const selectionListHeight = dimensions.height * 0.6 < 250 ? 250 : dimensions.height * 0.6
   return (
     <Container ref={targetRef}>
-      <MenuHeading header={"Klicke auf das Wort, welches doppelt vorkam"} />
+      <MenuHeading header={"Klicke auf das Element, welches doppelt vorkam"} />
       <Scrollbar style={{height: selectionListHeight }}>
         <MenuEntry>
           <div>
@@ -64,14 +68,22 @@ export default ({ level, data, settings, expected, roundOne, roundTwo }) => {
           </div>
         </MenuEntry>
       </Scrollbar>
-      { actual && expected.element !== actual && <div>
+      { actual && !isCorrectSelection(actual) && <div>
+        <div className={"selection-wrong-text"}>
+          Deine Erinnerung hat Dir einen Streich gespielt <Emoji symbol="🙈" label="see-no-evil monkey" />
+        </div>
         <MenuButton link='../index' label='Hauptmenü' />
       </div>}
-      { actual && expected.element === actual && <div
+      { actual && isCorrectSelection(actual) && <div
         className={"box"}
         onClick={() => setAdvanceToNextLevel(true)}
       >
-        <Box label={"Auf zur nächsten Etappe"} />
+        <div className={"selection-correct-text"}>
+          Du hast Dich richtig erinnert! <Emoji symbol="🧐" label="face with monocle" />
+        </div>
+        <MenuEntry>
+          <Box label={"Auf zur nächsten Etappe"} />
+        </MenuEntry>
       </div>}
     </Container>
   );

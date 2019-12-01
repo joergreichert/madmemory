@@ -53,6 +53,10 @@
   color: #333;
 }
 
+.label {
+  font-weight: bold;
+}
+
 @keyframes Loading {
   0%{background-position:0% 50%}
   50%{background-position:100% 50%}
@@ -80,20 +84,20 @@
   white-space: wrap;
 }
 
-.label {
-  font-weight: bold;
+.selection-correct {
+  background-color: green;
 }
 
-.value {
-  font-weight: normal;
+.selection-correct-text {
+  color: green;
 }
 
-.title {
-  margin: 0;
-  width: 100%;
-  padding-top: 20px;
-  line-height: 1.15;
-  font-size: 48px;
+.selection-wrong {
+  background-color: red;
+}
+
+.selection-wrong-text {
+  color: red;
 }
 
 .stats {
@@ -105,6 +109,18 @@
   text-align: center;
 }
 
-.title, .description, .stats {
+.title {
+  margin: 0;
+  width: 100%;
+  padding-top: 20px;
+  line-height: 1.15;
+  font-size: 48px;
+}
+
+.title, .description, .stats, .selection-correct-text, .selection-wrong-text {
   text-align: center;
+}
+
+.value {
+  font-weight: normal;
 }

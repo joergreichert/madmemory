@@ -1,7 +1,8 @@
 import { useMemo } from 'react';
 import { roundTwoObjects } from '../../lib/game/objectstate'
 import useIndex from '../../lib/game/useindex';
-import ObjectDisplay from './object_display'
+import WordDisplay from './word_display'
+import SoundDisplay from './sound_display'
 import EvalInput from './eval_input'
 
 const RoundTwo = ({ level, data, settings, roundOneState }) => {
@@ -10,17 +11,21 @@ const RoundTwo = ({ level, data, settings, roundOneState }) => {
   const elementCount = settings.elementCount
   const roundOneElement = roundTwoState.duplicate
   const index = useIndex({...settings, level})
-  if (index[level] < elementCount) {
-    return (
-      <ObjectDisplay
-        level={level}
-        roundNumber={2}
-        item={roundTwo[index[level]]}
-        timeout={settings.displayTime}
-        itemIndex={index[level]+1}
-        totalCount={settings.elementCount}
-      />
-    );
+  const idx = index[level]
+  if (idx < elementCount) {
+    const config = {
+      item: roundTwo[idx],
+      itemIndex: idx+1,
+      level,
+      roundNumber: 2,
+      timeout: settings.displayTime,
+      totalCount: settings.elementCount,
+    }
+    if (config.item.sound) {
+      return (<SoundDisplay {...config} />);
+    } else {
+      return (<WordDisplay {...config} />);
+    }
   } else {
     return (
       <EvalInput
