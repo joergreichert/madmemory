@@ -1,10 +1,10 @@
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import useCountDown from '../../lib/game/useCountDown';
+import useCountDown from '../../lib/hooks/useCountDown';
 import React, { useRef } from "react";
 import { Scrollbar } from  'react-scrollbars-custom'
-import useDimension from '../../lib/game/useDimension';
+import useDimension from '../../lib/hooks/useDimension';
 import calcFontSize from '../../lib/game/calcFontSize';
 import Stats from './stats';
 

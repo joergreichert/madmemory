@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import { roundTwoObjects } from '../../lib/game/objectstate'
-import useIndex from '../../lib/game/useindex';
+import useIndex from '../../lib/hooks/useindex';
 import WordDisplay from './word_display'
 import SoundDisplay from './sound_display'
 import EvalInput from './eval_input'

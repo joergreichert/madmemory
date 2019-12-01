@@ -8,7 +8,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import { useState, useMemo, useRef } from 'react';
 import RoundOne from './round_one'
-import useDimension from '../../lib/game/useDimension';
+import useDimension from '../../lib/hooks/useDimension';
 import { Scrollbar } from  'react-scrollbars-custom'
 import Emoji from 'a11y-react-emoji'
 

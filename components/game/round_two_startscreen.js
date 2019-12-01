@@ -1,10 +1,9 @@
-import useIndex from '../../lib/game/useindex';
+import useIndex from '../../lib/hooks/useindex';
 import WordDisplay from './word_display'
 import RoundTwo from './round_two'
 
 const RoundTwoStartScreen = ({ level, data, settings, roundOneState }) => {
   const index = useIndex({elementCount: 2, displayTime: settings.displayTime, level})
-  console.log("werde ich aufgerufen")
   if (index[level] === 0) {
     return (
       <WordDisplay
