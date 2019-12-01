@@ -1,4 +1,4 @@
-import useIndex from '../../lib/hooks/useindex';
+import useIndex from '../../lib/hooks/useIndex';
 import WordDisplay from './word_display'
 import RoundTwo from './round_two'
 
