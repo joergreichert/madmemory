@@ -2,6 +2,7 @@ import { useMemo } from 'react';
 import { roundOneObjects } from '../../lib/game/objectstate'
 import useIndex from '../../lib/hooks/useindex';
 import WordDisplay from './word_display'
+import ImageDisplay from './image_display'
 import SoundDisplay from './sound_display'
 import RoundTwoStartScreen from './round_two_startscreen'
 
@@ -20,8 +21,10 @@ const RoundOne = ({ level, settings, data }) => {
       timeout: settings.displayTime,
       totalCount: settings.elementCount,
     }
-    if (config.item.sound) {
+    if (config.item.sound && config.item.image) {
       return (<SoundDisplay {...config} />);
+    } else if (config.item.image) {
+      return (<ImageDisplay {...config} />);
     } else {
       return (<WordDisplay {...config} />);
     }
