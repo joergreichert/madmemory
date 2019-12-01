@@ -10,7 +10,7 @@ import Stats from './stats';
 
 export default ({ level, roundNumber, item, timeout, itemIndex, totalCount }) => {
   const remainingSeconds = timeout && useCountDown(timeout)
-  useAudio({url: item.sound, itemIndex, totalCount});
+  useAudio({url: item.sound, itemIndex, totalCount, timeout});
   const targetRef = useRef();
   const dimensions = useDimension(targetRef)
   const potImageHeight = dimensions.height * 0.8
