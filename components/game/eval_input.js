@@ -40,7 +40,7 @@ export default ({ level, data, settings, expected, roundOne, roundTwo }) => {
     return <RoundOne
       level={level+1}
       settings={{...settings,
-        elementCount: settings.elementCount + (level * 5)
+        elementCount: settings.elementCount + 5
       }}
       data={data}
     />
