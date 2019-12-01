@@ -13,15 +13,16 @@ export default ({ level, roundNumber, item, timeout, itemIndex, totalCount }) =>
   useAudio({url: item.sound, itemIndex, totalCount, timeout});
   const targetRef = useRef();
   const dimensions = useDimension(targetRef)
-  const potImageHeight = dimensions.height * 0.8
-  const imageHeight = potImageHeight > 200 ? 200
-    : (potImageHeight < 100 ? 100 : potImageHeight)
+  const getImageHeight = screenHeight => {
+    const potImageHeight = screenHeight * 0.6
+    return potImageHeight < 100 ? 100 : potImageHeight
+  }
   return (
     <Container ref={targetRef}>
       <Row>
         <Col xs={12} md={12}>
           <div className={"object_display_item"}>
-            <Image src={[item.image]} height={imageHeight} />
+            <Image src={[item.image]} height={getImageHeight(dimensions.height)} />
           </div>
         </Col>
       </Row>
