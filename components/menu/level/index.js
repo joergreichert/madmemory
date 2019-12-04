@@ -15,6 +15,6 @@ export default () => (
         ))}
       </form>
     </MenuEntry>
-    <MenuButton link='./' label='Zurück' />
+    <MenuButton link='/settings' label='Zurück' />
   </Container>
 )

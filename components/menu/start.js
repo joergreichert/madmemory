@@ -3,7 +3,7 @@ import MenuEntry from './button'
 
 export default () => (
   <Container>
-    <MenuEntry link='./game/words' label='Spielen' />
-    <MenuEntry link='./settings' label='Einstellungen' />
+    <MenuEntry link='/game/words' label='Spielen' />
+    <MenuEntry link='/settings' label='Einstellungen' />
   </Container>
 )
